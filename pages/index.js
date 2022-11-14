@@ -7,17 +7,19 @@ const StyledContainer = styled.div`
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 600px;
+    max-width: 320px;
     min-height: 400px;
     background-color: #444444;
     border-radius: 32px;
     padding: 32px;
-
+    margin: 0px 0px;
     h1 {
         font-size: 24px;
         margin-top: 16px;
-        line-height: 0;
+        line-height: 1.2;
+        text-align: center;
     }
+    flex-shrink: 1;
 `;
 
 const StyledFormContainer = styled.div`
@@ -25,13 +27,14 @@ const StyledFormContainer = styled.div`
     align-items: center;
     justify-content: space-around;
     background-color: rgba(255, 255, 255, 0.12);
-    padding: 20px 6px;
+    padding: 20px 12px;
     border-radius: 16px;
-    width: 440px;
+    max-width: 300px;
     margin: 8px 0px;
     border: ${(props) => {
         return props.cheapest ? "3px solid #49a553" : "none";
     }};
+    gap: 10px;
 
     .entry {
         display: flex;
@@ -44,8 +47,9 @@ const StyledFormContainer = styled.div`
         background-color: #444444;
         border-radius: 8px;
         border: none;
-        padding: 6px 12px;
+        padding: 6px 8px;
         color: rgba(255, 255, 255, 0.7);
+        max-width: 130px;
     }
 
     .entry input::placeholder {
